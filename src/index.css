@@ -1,0 +1,187 @@
+@import "tailwindcss";
+@plugin "daisyui";
+@import "remixicon/fonts/remixicon.css";
+@import "tw-animate-css";
+
+body {
+  font-family: "Raleway", sans-serif;
+}
+.gradient-bg {
+  background: linear-gradient(135deg, #667e 0%, #768 100%);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.floating {
+  animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-in-left {
+  animation: slideInLeft 1s ease-out;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-in-right {
+  animation: slideInRight 1s ease-out;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hover-scale {
+  transition: all 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 30px rgba(253,232,227,1);
+}
+
+.glow-effect {
+  box-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.bounce-animation {
+  animation: bounce 5s infinite;
+}
+
+/* Styling */
+.bg-white-purple {
+  background-color: #FDE8E3;
+}
+
+.bg-primary {
+  background-color: #654351;
+}
+
+.bg-about {
+  background-color: #3A2B32;
+}
+
+.text-typo {
+  color: #3A2B32;
+}
+
+.circle-primary {
+  width: 846px;
+  height: 758px;
+}
+
+.text-white-purple {
+  color: #FDE8E3;
+}
+.wh-text {
+  color: #efe6de;
+}
+
+.bg-wh {
+  background-color: #efe6de;
+}
+
+.btn-red-dark {
+  background-color: #55120a;
+}
+
+.red-dark {
+  color: #55120a;
+}
+
+.separator {
+  width: 0;
+  height: 0;
+  border-right: 100vw solid transparent;
+  border-bottom: 13.9vw solid #fff4;
+  margin-top: -13.9vw;
+}
+/* HTML: <div class="hexagon"></div> */
+.hexagon {
+  top: -10vw;
+  z: 999;
+  height: 223px; /* adjust to control the size  */
+  aspect-ratio: 1/cos(60deg);
+  clip-path: polygon(50% -50%,100% 50%,50% 150%,0 50%);
+  background: #55120a
+}
